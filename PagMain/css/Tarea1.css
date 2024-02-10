@@ -34,16 +34,19 @@ text-align: justify;
 width: 60%;
 float: left;
 margin-bottom: 1%;
-padding: 1%;
+padding: 2%;
 }
 p{
+    font-size: 20px;
+}
+li{
     font-size: 20px;
 }
 footer{
     clear: both;
     position: absolute;
     bottom: 0;
-    height:120px;
+    height:100px;
     width:100%;
     background-color: #465362;
     font-size: 20px;
@@ -54,14 +57,16 @@ footer{
 }
 p{
     text-align: justify;
+    
 }
 .rightInf{
+    margin: auto;
     margin-left: 1%;
     margin-right: 1%;
     border-radius: 15px;
     background-color: #82A3A1;
     float: right;
-    text-align: left;
+    text-align: center;
     width: 30%;
     padding: 0.5%;
     margin-bottom: 1%;
