@@ -1,0 +1,132 @@
+:root{
+    /*
+    Variables default
+    */
+    --colormain: #011936;
+    --colorsec: #82A3A1;
+    --colorter: #465362;
+    --colorresaltado: #C0DFA1;
+    --fontsize: 20px;
+    --alturaheader: 9% ;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+header{
+    text-align: center;
+    background-color: var(--colorter);
+    flex: auto;
+    margin-bottom: 1%;
+    width: 100%;
+    height: var(--alturaheader);
+}
+.LinksHead{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+a{
+    color: var(--colorresaltado);
+    font-style: bold;
+    text-decoration: none;
+}
+body{
+    background-color: var(--colormain);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+.leftInf{
+margin-left: 1%;
+
+border-radius: 15px;
+background-color: var(--colorsec);
+text-align: justify;
+width: 60%;
+float: left;
+margin-bottom: 1%;
+padding: 2%;
+}
+p{
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+}
+footer{
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    height:100px;
+    width:100%;
+    background-color: var(--colorter);
+    font-size: 20px;
+    padding: 5px;
+    text-align: left;
+    padding: 1%;
+    margin-top: 1%;
+}
+p{
+    text-align: justify;
+    
+}
+img{
+    border: black;
+    border-radius: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5%;
+}
+.rightInf{
+    margin: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 15px;
+    background-color: #82A3A1;
+    float: right;
+    text-align: center;
+    width: 30%;
+    padding: 0.5%;
+    margin-bottom: 1%;
+}
+
+.lista_hamburgesa {
+}
+.lista_icon {
+    color: white;
+    cursor: pointer;
+}
+.ul_config {
+    width: 30%;
+    background-color: var(--colorresaltado);
+    position: absolute;
+    height: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    top: var(--alturaheader);
+    /*;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    transition: all 1s;
+
+}
+.menu_hamburgesa{
+    display: none;
+
+}
+.menu_hamburgesa:checked + .ul_config {
+    height: calc(100vh- var(--alturaheader));
+}
+.LinksHead {
+}
+.w-6 {
+}
+.h-6 {
+}
