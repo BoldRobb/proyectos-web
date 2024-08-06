@@ -25,11 +25,14 @@ header{
 .LinksHead{
     margin-left: 3%;
     margin-right: 3%;
+
 }
 a{
     color: var(--colorresaltado);
     font-style: bold;
     text-decoration: none;
+    background-color: none;
+    font-size: 24px;
 }
 body{
     background-color: var(--colormain);
@@ -49,13 +52,14 @@ padding: 2%;
 }
 p{
     font-size: 20px;
+    background-color: none;
 }
 li{
     font-size: 20px;
 }
 footer{
     clear: both;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height:100px;
     width:100%;
@@ -64,10 +68,11 @@ footer{
     padding: 5px;
     text-align: left;
     padding: 1%;
-    margin-top: 1%;
+    margin-top: 5%;
 }
 p{
     text-align: justify;
+
     
 }
 img{
@@ -75,7 +80,7 @@ img{
     border-radius: 20px;
 }
 nav{
-    display: flex;
+
     align-items: center;
     flex-wrap: wrap;
     padding: 0.5%;
@@ -92,41 +97,45 @@ nav{
     padding: 0.5%;
     margin-bottom: 1%;
 }
-
-.lista_hamburgesa {
+.midInfo{
+margin-left: 8%;
+border-radius: 15px;
+background-color: var(--colorsec);
+text-align: justify;
+width: 80%;
+float: left;
+margin-bottom: 15%;
+padding: 2%;
+text-align: center;
 }
-.lista_icon {
-    color: white;
-    cursor: pointer;
+li{
+    font-size: 28px;
+    margin: 10px;
 }
-.ul_config {
-    width: 30%;
-    background-color: var(--colorresaltado);
-    position: absolute;
-    height: 0;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    top: var(--alturaheader);
-    /*;*/
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 18px;
+    
+}
+.buttonRedondeado{
+    font-size: 24px;
+    border-radius: 10%;
+    padding: 2%;
+}
+button{
+    font-size: 24px;
+    padding: 0.5%;
+}
+.BotonesConfiguracion{
+    margin-top: 2%;
+    align-items: center;
+    
+}
+.tablaExample{
+    align-items: center;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    transition: all 1s;
-
-}
-.menu_hamburgesa{
-    display: none;
-
-}
-.menu_hamburgesa:checked + .ul_config {
-    height: calc(100vh- var(--alturaheader));
-}
-.LinksHead {
-}
-.w-6 {
-}
-.h-6 {
 }

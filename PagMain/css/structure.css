@@ -56,7 +56,7 @@ aside{
 }
 footer{
     clear: both;
-    position: absolute;
+    position: flex;
     bottom: 0;
     height:100px;
     width:100%;
@@ -65,7 +65,7 @@ footer{
     padding: 5px;
     text-align: left;
     padding: 1%;
-    margin-top: 1%;
+    
 }
 .me{
     margin: auto;
@@ -74,4 +74,48 @@ a{
     color: #C0DFA1;
     font-style: bold;
     text-decoration: none;
+
+}
+form{
+    background-color:#82A3A1;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    padding: 1%;
+    border-radius: 15px;
+    align-items: left;
+
+}
+.showps{
+display: inline-block;
+}
+.buttonEnviar{
+    float: right;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.buttonVaciar{
+float: left;
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+border-radius: 5px;
+transition: background-color 0.3s, color 0.3s;
+}
+input{
+    font-size: 20px;
+}
+.error-message{
+    color: red;
 }

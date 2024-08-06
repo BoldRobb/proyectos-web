@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina personal</title>
+    <link rel="stylesheet" href="css/Tarea3.css">
+    <script src="js/config.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>
+                <a class="LinksHead" href="../index.html" >Contenedor</a>
+                <a class="LinksHead" href="pagPersonal.html" >Inicio</a>
+                <a class="LinksHead" href="infPersonal.html" >Informacion personal</a>
+                <a class="LinksHead" href="formAcademica.html" >Formacion academica</a>
+                <a class="LinksHead" href="sitLaboral.html" >Situacion laboral</a>
+                <a class="LinksHead" href="actExtra.html" >Actividades extraescolares</a>
+                <a class="LinksHead" href="config.html" >Configuración</a>
+            </h2>
+
+        </nav>
+
+    </header>
+    <div class="midInfo">
+        <h2>
+            Parametros de Configuración
+        </h2>
+        <ul>
+
+            <li>
+                Fondo
+                <h3>Color: </h3>
+                <input type="color" id="pickerFondo" onchange=cambiarBody(this.value)>
+            </li>
+            <li>
+                Enlaces
+                <h3>Redondeo (pixeles): </h3>
+                <input type="number" id="linkRound" min="8" max="48" placeholder="16" step="2" onchange=redondeoLinks(this.value)>
+                <h3>Color de fondo: </h3>
+                <input type="color" id="linkColorFondo" onchange=fondoLinks(this.value)>
+                <h3>Color del texto: </h3>
+                <input type="color" id="linkColorText" onchange=textoLinks(this.value)>
+            </li>
+            <li>
+                Imagenes
+                <h3>Tamaño imagen: </h3>
+                <button class="buttonRedondeado" id="imgChico" onclick=sizeImagen(1)>
+                    Chico </button>
+                <button class="buttonRedondeado" id="imgMediano" onclick=sizeImagen(2)>
+                    Mediano </button>
+                <button class="buttonRedondeado" id="imgGrande" onclick=sizeImagen(3)>
+                    Grande </button>
+                <h3>Contorno</h3>
+                <h4>Color: </h4>
+                <input type="color" id="colorBorder" onchange=bordeImagen(this.value)>
+                <h4>Grosor: </h4>
+                <button class="buttonRedondeado" id="imgContornoChico" onclick=borderSizeImagen(1)>
+                    Chico </button>
+                <button class="buttonRedondeado" id="imgContornoMediano" onclick=borderSizeImagen(2)>
+                    Mediano </button>
+                <button class="buttonRedondeado" id="imgContornoGrande" onclick=borderSizeImagen(3)>
+                    Grande </button>
+                <h3>Redondeo de imagenes: </h3>
+                <button class="buttonRedondeado" id="imgRedondeadoChico" onclick=radiusSizeImagen(1)>
+                    Chico </button>
+                <button class="buttonRedondeado" id="imgRedondeadoMediano" onclick=radiusSizeImagen(2)>
+                    Mediano </button>
+                <button class="buttonRedondeado" id="imgRedondeadoGrande" onclick=radiusSizeImagen(3)>
+                    Grande </button>
+                <h3>Sombras: </h3>
+                <input type="checkbox" id="checkSombra" onchange=sombraImagen()>
+                <br>
+                <img src="../resources/uaslogo.png" alt="logouas" width="20%" height="20%">
+            </li>
+
+            <li>
+                Tablas
+                <h3>Color del borde:</h3>
+                <input type="color" id="colorTabla" onchange=colorBordeTabla(this.value)>
+                <h3>Color del fondo: </h3>
+                <input type="color" id="colorFondoTabla" onchange=colorFondoTabla(this.value)>
+                <h3>Color de celda de titulos: </h3>
+                <input type="color" id="colorTitulosTabla" onchange=colorTituloTabla(this.value)>
+                
+                <div class = "tablaExample" id = "mitabla">
+                    <table border="1">
+                        <tr>
+                          <th>Titulo 1</th>
+                          <th>Titulo 2</th>
+                        </tr>
+                        <tr>
+                          <td>Celda 1</td>
+                          <td>Celda 2</td>
+                        </tr>
+                      </table>
+                </div>
+                
+            </li>
+            <li>
+                Texto
+                <br>
+                <h3>Parrafos</h3>
+                <h4>Color: </h4>
+                <input type="color" id="pickerParrfo" onchange= colorParrafo(this.value)>
+                <h4>Tamaño (pixeles): </h4>
+                <input type="number" id="sizeParrafo" min="8" max="48" placeholder="16" step="2" onchange= sizeParrafo(this.value)>
+                <h4>Fondo: </h4>
+                <input type="color" id="pickerParrafoFondo" onchange= fondoParrafo(this.value)>
+
+                <br>
+                <h3>Titulos</h3>
+                <h4>Color: </h4>
+                <input type="color" id="pickerTitulo" onchange= colorTitulo(this.value)>
+                <h4>Tamaño (pixeles): </h4>
+                <input type="number" id="sizeTitulo" min="8" max="48" placeholder="16" step="2" onchange= sizeTitulo(this.value)>
+                <h4>Fondo: </h4>
+                <input type="color" id="pickerTituloFondo" onchange= fondoTitulo(this.value)>
+
+                <br>
+                <h3>Subtitulos</h3>
+                <h4>Color: </h4>
+                <input type="color" id="pickerSubtitulo" onchange= colorsubTitulo(this.value)>
+                <h4>Tamaño (pixeles): </h4>
+                <input type="number" id="sizeSubtitulo" min="8" max="48" placeholder="16" step="2" onchange= sizesubTitulo(this.value)>
+                <h4>Fondo: </h4>
+                <input type="color" id="pickerSubtituloFondo" onchange= fondosubTitulo(this.value)>
+            </li>
+
+        </ul>
+        <div class="BotonesConfiguracion">
+            <button id="saveConfig" onclick=cargarConfiguracionDesdeCookies()>
+                Guardar configuración
+            </button>
+            <button id="restartConfig" onclick=configInicial()>
+                Reiniciar configuración
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        Pagina elaborada por: Roberto Betancourt Soto 
+        
+        <p>
+            
+            <img src="../resources/twitter-square-icon.svg" alt="twitter" height = 20px width= 20px> Twitter: <a href="https://www.twitter.com/boldrobb">@Boldrobb</a>
+            <br> <svg height = 20px width= 20px xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+              </svg>
+              Instagram: <a href="https://www.instagram.com/boldrobb" >@Boldrobb</a>
+            <br> <img src="../resources/fist-svgrepo-com.svg" alt="puño" height = 20px width= 20px> Riot: Elderd1us#0029
+            <br> 
+            
+        </p>
+    </footer>
+
+
+
+</body>
+</html>
